@@ -1,12 +1,16 @@
 package com.itliusir.module.user.entity;
 
 
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.itliusir.module.security.role.entity.Role;
+import com.itliusir.util.Constants;
 
 import javax.persistence.*;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -28,12 +32,17 @@ public class User implements Serializable {
     private String username;
 
     //密码
-    @Column(nullable = false)
+    @Column(nullable = false )
     @JsonIgnore
     private String password;
 
     //用户令牌
     private String token;
+    
+    //注册时间
+    @Column(nullable = false)
+    @JsonFormat(pattern = Constants.DATETIME_FORMAT)
+    private Date inTime;
 
     //用户与角色的关联关系
     @ManyToMany(cascade = CascadeType.ALL)
@@ -83,5 +92,12 @@ public class User implements Serializable {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+    public Date getInTime() {
+        return inTime;
+    }
+
+    public void setInTime(Date inTime) {
+        this.inTime = inTime;
     }
 }

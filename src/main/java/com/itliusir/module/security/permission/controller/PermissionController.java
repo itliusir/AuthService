@@ -1,6 +1,7 @@
 package com.itliusir.module.security.permission.controller;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -9,14 +10,18 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.itliusir.module.security.permission.entity.Permission;
 import com.itliusir.module.security.permission.service.PermissionService;
+
 import javax.servlet.http.HttpServletResponse;
 
 /**
  * Created by itliusir
  */
-@Controller
+@RestController
 @RequestMapping("/admin/permission")
 public class PermissionController {
 
@@ -27,7 +32,7 @@ public class PermissionController {
      * 角色列表
      * @return
      */
-    @GetMapping("/list")
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
     public List<Permission> list() {
     	List<Permission> list = permissionService.findAllChildPermission();
         return list;

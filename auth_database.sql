@@ -41,9 +41,9 @@ VALUES
 	(1, 14),
 	(1, 15);
 
-INSERT INTO `auth_user` (`id`, `password`, `username`, `token`)
+INSERT INTO `auth_user` (`id`, `in_time`, `password`, `username`, `token`)
 VALUES
-	(1,'$2a$10$KkUG107R3ASTHfAHei.bweXWXgCa4cE1KhK.F0odzfE0r97aeeTXC','admin','d20b9a5c-8693-41a6-8943-ddb2cb78eebd');
+	(1,'2017-04-14 17:36:14','$2a$10$KkUG107R3ASTHfAHei.bweXWXgCa4cE1KhK.F0odzfE0r97aeeTXC','admin','d20b9a5c-8693-41a6-8943-ddb2cb78eebd');
 
 INSERT INTO `auth_user_role` (`user_id`, `role_id`)
 VALUES

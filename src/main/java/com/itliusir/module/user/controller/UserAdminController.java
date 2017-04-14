@@ -8,12 +8,17 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
 import com.itliusir.module.security.role.entity.Role;
 import com.itliusir.module.security.role.service.RoleService;
 import com.itliusir.module.user.entity.User;
 import com.itliusir.module.user.service.UserService;
+
 import javax.servlet.http.HttpServletResponse;
+
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -39,7 +44,7 @@ public class UserAdminController {
      */
     @GetMapping("/list")
     public List<User> list() {
-        return userService.findAll();
+    	return userService.findAll();
     }
 
     /**
