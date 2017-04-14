@@ -43,7 +43,8 @@ VALUES
 
 INSERT INTO `auth_user` (`id`, `in_time`, `password`, `username`, `token`)
 VALUES
-	(1,'2017-04-14 17:36:14','$2a$10$KkUG107R3ASTHfAHei.bweXWXgCa4cE1KhK.F0odzfE0r97aeeTXC','admin','d20b9a5c-8693-41a6-8943-ddb2cb78eebd');
+	(1,'2017-04-14 17:36:14','$2a$10$/bTVvqqlH9UiE0ZJZ7N2Me3RIgUCdgMheyTgV0B4cMCSokPa.6oCa','admin','d20b9a5c-8693-41a6-8943-ddb2cb78eebd'),
+	(2,'2017-04-14 19:23:14','$2a$10$/bTVvqqlH9UiE0ZJZ7N2Me3RIgUCdgMheyTgV0B4cMCSokPa.6oCa','itliusir','760eb377-bd35-42e3-b9d2-d291cf5b7fd6');
 
 INSERT INTO `auth_user_role` (`user_id`, `role_id`)
 VALUES

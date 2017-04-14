@@ -53,10 +53,10 @@ public class LoginController {
 //    public static final String loginpwd = "$2a$10$vrRXrBN7.5fAkaHXN7HFY..4GuYh2zAnPrp/.f0qVHmhl6v6GGa5C";
     @RequestMapping(method = RequestMethod.POST, path = "/login", produces = "application/json;charset=utf8")
     public Map<String, String> login(@RequestParam(value = "username") String username,@RequestParam(value = "password") String password, Device device) {
-    	User user = userService.findByUsername(username);
+    	/*User user = userService.findByUsername(username);
         if (user == null) {
             throw new BadCredentialsException("invalid key");
-        }
+        }*/
         // Perform the security
         final Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
