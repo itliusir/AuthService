@@ -1,7 +1,7 @@
-# 授权服务（开发中ing 如有兴趣可以一起学习 +Q571624628）#
+# 授权服务（开发中ing 如有兴趣可以一起学习 +Q571624628）
 
 
-== 技术栈
+**技术栈**
 - jdk8
 - spring-boot
 - spring-security
@@ -12,7 +12,7 @@
 - jwt
 - SpringCloud
 
-== 如何开始
+**如何开始**
 
 - `git clone https://github.com/itliusir/AuthService.git`
 - 修改配置文件 `src/main/resources/application.yml` 里的配置项
@@ -22,7 +22,7 @@
 - Postman http://localhost:8080/login
 - 默认帐户 `admin` `123456`
 
-== 打jar包运行
+**打jar包运行**
 
 - `git clone https://github.com/itliusir/AuthService.git`
 - 修改配置文件 `src/main/resources/application.yml` 里的配置项
